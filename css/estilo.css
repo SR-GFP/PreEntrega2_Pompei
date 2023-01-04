@@ -1,0 +1,212 @@
+/*Reset*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;    
+}
+.separador{
+    width: 8px;
+
+}
+
+/*Estilos del Header*/
+.header{
+    display: grid;
+    grid-template-columns: 10% auto 20%;
+    grid-template-rows: auto 1fr;
+    grid-template-areas: 
+    "none header__logo header__user"
+    "header__nav header__nav header__nav";        
+    background-color: #4d4a4ad6;
+    color: #fff;    
+}
+.header__logo{
+    margin: 0px 0px;    
+    grid-area: header__logo;
+    display: flex;    
+    align-items: center;    
+}
+.header__logo img{
+    width: 85px;
+
+}
+.header__logo h1{
+    font-size: 4rem;
+    text-shadow: 11px -4px 19px #06dbee;
+    font-family: 'Courier New', Courier, monospace;
+    margin-bottom: -10px;     
+}
+.header__logo p {
+    font-size: 2rem;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;     
+    font-style: italic;
+    margin-top: -15px;
+}
+.header__logo__titulo{
+    margin-left: 60px;
+    text-align: center;
+}
+
+.header__user{
+    grid-area: header__user;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;    
+}
+.header__user p{
+    border-radius: 47px;
+    background: #bafef9;
+    color: black;
+}
+.header__user img{
+    width: 65px;
+}
+.header__nav{
+    grid-area: header__nav;
+    display: grid;
+    grid-template-columns:auto;
+    grid-template-rows: auto;    
+    background-color: #d8141478;
+    border-radius: 100px 0px 100px 1px;
+    justify-items: center;
+    border: 1px inset black;
+}
+.header__nav ul{
+    display: flex;
+    list-style: none;
+}
+.header__nav li{
+    margin: 0px 40px;    
+}
+.header__nav a{
+    text-decoration: none;
+    font-size: 2rem;
+    color: #fff;    
+}
+.header__nav__buscador{
+    display: flex;
+    align-items: center;
+    color: black;
+    font-size: 2rem;
+    font-weight: 900;
+    font-style: italic;
+}
+.header__nav__buscador input{
+    width: 500px;
+    height: 25px;
+    border-radius: 15px;
+    margin: 5px 0px;    
+}
+.header__nav__buscador input::placeholder{
+    color: black;
+    font-weight: lighter;
+    font-style: italic;
+    font-size: 1rem;
+    text-align: center;
+}
+
+/*Estilos del main*/
+.main{
+    background-color: #e5e5f7;
+    background-image:  radial-gradient(#444cf7 0.5px, transparent 0.5px), radial-gradient(#444cf7 0.5px, #e5e5f7 0.5px);
+    background-size: 20px 20px;
+    background-position: 0 0,10px 10px;
+    text-align: center;
+    padding-bottom: 10px;    
+}
+.main__galeria{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, auto));
+    align-items: center;
+    grid-column-gap: 3px;
+    border: 14px inset #808080bf;
+}
+.main__galeria img{
+    width: 100%;
+    height: 100%;
+}
+.main__presentacion{
+    margin: 2% 20%;    
+}
+.main__presentacion h3{
+    font-size: 4rem;
+}
+.main__presentacion p{
+    font-size: 2rem;
+}
+
+.main__barra{
+    display: flex;    
+    background-color: black;    
+    color: #fff;
+    padding: 10px 0px;
+}
+.main__barra img{
+    width: 80px;
+}
+.main__barra p{
+    font-size: 2rem;    
+}
+.main__barra__columnas{
+    display: flex;
+    align-items: center;
+    margin: 0px 30px;   
+}
+
+/*Estilos Footer*/
+.footer{
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #4d4a4ad6;
+    align-items: center;
+}
+.footer img{
+    width: 50px;
+}
+.footer__datos{
+    display: flex;
+}
+.footer__datos__iconos{
+    margin: 10px 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+}
+.footer__redes{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5px;    
+}
+.footer__redes img{
+    margin: 2px
+}
+
+/*Responsive*/
+@media screen and (max-width: 1024px) {
+    .header{
+        background-color: #06dbee;
+    }
+    .header__logo{
+        display: flex;
+        
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .header{
+        background-color: yellow;
+    }
+    .header__logo{
+        display: flex;
+
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .header{
+        background-color: black; 
+
+    }
+}
