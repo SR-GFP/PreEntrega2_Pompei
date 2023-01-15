@@ -9,6 +9,13 @@ html{
     font-size: 62.5%;/* hack 1ren = 10px*/
 }
 
+/*generales*/
+
+.flex_center{
+    display: flex;    
+    justify-content: center;
+
+}
 
 /*Estilos del Header*/
 .header{
@@ -18,23 +25,20 @@ html{
     grid-template-areas: 
     "header__logo header__titulo header__user"
     "header__nav header__nav header__nav";        
-    background-color: #4d4a4ad6;
-    color: #fff;    
+    background-color: #4d4a4aeb;
 }
-.header__logo{        
+
+.header__logo{
     grid-area: header__logo;
-    display: flex;    
-    align-items: center;    
 }
 .header__logo img{
     width: 85px;
 }
 
 .header__titulo{
-    display: flex;
     flex-direction: column;
     grid-area: header__titulo;    
-    text-align: center;    
+    text-align: center;
     color: black;
     font-size: 4rem;
 
@@ -42,18 +46,19 @@ html{
 .header__titulo h1{    
     text-shadow: 11px -4px 19px #06dbee;
     font-family: 'Courier New', Courier, monospace;
-    margin-bottom: -10px;     
+    margin-bottom: -10px;
+    color:  #a21a1a;
 }
-.header__titulo p {
+.header__titulo h2 {
     font-size: 4rem;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;     
+    font-family: 'Euphoria Script';
     font-style: italic;
-    margin-top: -15px;
+    margin-top: -25px;
+    color: white;
 }
 
 .header__user{
     grid-area: header__user;
-    display: flex;
     align-items: center;
     justify-content: space-evenly;    
 }
@@ -65,48 +70,60 @@ html{
 .header__user img{
     width: 65px;
 }
+
 .header__nav{
     grid-area: header__nav;
-    display: grid;
-    grid-template-columns:auto;
-    grid-template-rows: auto;    
-    background-color: #d8141478;
+    position: sticky;
+    background-color: #a21a1a;
     border-radius: 100px 0px 100px 1px;
     justify-items: center;
-    border: 1px inset black;
+    border: 1px inset #04fffafc;
+    align-items: center;
 }
 .header__nav ul{
     display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
     list-style: none;
+    margin: 2px 0px;
 }
-.header__nav li{
-    margin: 0px 40px;    
+.header__nav__li{
+    padding: 0px 20px;
+    margin: 0px 20px;
+    background-color: #8ac2c34a;
+    border-radius: 15px;
 }
 .header__nav a{
     text-decoration: none;
     font-size: 2rem;
     color: #fff;    
 }
-.header__nav__buscador{
-    display: flex;
-    align-items: center;
-    color: black;
-    font-size: 2rem;
-    font-weight: 900;
-    font-style: italic;
+.header__nav--active{
+    background-color: black;
 }
-.header__nav__buscador input{
-    width: 500px;
+
+.header__nav--input{
+    margin: 0px 20px;
+}
+.header__nav--input input{    
+    background-color: #8ac2c34a;
+    width: 300px;
     height: 25px;
-    border-radius: 15px;
-    margin: 5px 0px;    
+    border-radius: 13px;    
 }
-.header__nav__buscador input::placeholder{
-    color: black;
-    font-weight: lighter;
+.header__nav--input input::placeholder{
+    font-family:'Courier New', Courier, monospace;    
+    color: rgba(0, 0, 0, 0.485);
+    font-weight: bold;
     font-style: italic;
-    font-size: 1rem;
+    font-size: 1.5rem;
     text-align: center;
+    border: none;
+}
+.header__nav--input input:focus{
+    background-color: black;
+    color: white;
 }
 
 /*Estilos del main*/
@@ -139,8 +156,13 @@ html{
     font-size: 2rem;
 }
 
+
+
+
 .main__barra{
-    display: flex;    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
     background-color: black;    
     color: #fff;
     padding: 10px 0px;
@@ -153,13 +175,15 @@ html{
 }
 .main__barra__columnas{
     display: flex;
+
     align-items: center;
-    margin: 0px 30px;   
+    margin: 10px 10px;   
 }
 
 /*Estilos Footer*/
 .footer{
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-evenly;
     background-color: #4d4a4ad6;
     align-items: center;
@@ -167,8 +191,13 @@ html{
 .footer img{
     width: 50px;
 }
+.footer p {
+    font-size: 2rem;
+}
 .footer__datos{
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 .footer__datos__iconos{
     margin: 10px 40px;
@@ -177,14 +206,17 @@ html{
     align-items: center;    
 }
 .footer__redes{
-    display: flex;
-    flex-direction: column;
+    display: flex;    
     justify-content: center;
     align-items: center;
-    margin-top: 5px;    
+    
 }
 .footer__redes img{
-    margin: 2px
+    padding: 5px;
+    padding: 5px;
+}
+.footer__redes h3{
+    font-size: 2rem;
 }
 
 /*Responsive*/
@@ -209,6 +241,15 @@ html{
     }
 }
 
+@media screen and (max-width: 480px) {
+    .header{
+        background-color: rgb(255, 0, 251);
+    }
+    .header__logo{
+        display: flex;
+
+    }
+}
 @media screen and (max-width: 320px) {
     .header{
         background-color: black; 

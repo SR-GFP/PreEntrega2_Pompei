@@ -6,25 +6,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kalaka Calcos y Estampados</title>
     <link rel="shortcut icon" href="./media/logo.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Euphoria+Script&family=Montserrat:wght@500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/estilo.css">
 </head>
 <body>
     <header class="header">
-        <div class="header__logo">
+        <div class="header__logo flex_center">
             <img src="./media/logo.png" alt="">
         </div>
 
-        <div class="header__titulo">
+        <div class="header__titulo flex_center">
                 <h1>KALAKA</h1>
-                <p>Calcos y Estampados</p>
+                <h2>Calcos y Estampados</h2>
         </div>
         
-        <div class="header__user">
+        <div class="header__user flex_center">
             <div class="header__user__carrito">
                 <a href="./vistas/#">
                 <img src="./media/carritoDeCompras.png" alt=""></a>
             </div>
-            
+
             <div class="header__user__usuario">
                 <a href="./vistas/#">
                     <img src="./media/cuenta.png" alt="">
@@ -32,20 +35,19 @@
             </div>
         </div>
 
-        <nav class="header__nav">
+        <nav class="header__nav flex_center">
             <ul>
-                <li><a href="">Home</a></li>
-                <li><a href="">Calcos</a></li>
-                <li><a href="">Impresiones</a></li>
-                <li><a href="">Estampados</a></li>
-                <li><a href="">Contacto</a></li>
+                <li class="header__nav__li header__nav--active"><a href="">Home</a></li>
+                <li class="header__nav__li"><a href="">Calcos</a></li>
+                <li class="header__nav__li"><a href="">Impresiones</a></li>
+                <li class="header__nav__li"><a href="">Estampados</a></li>
+                <li class="header__nav__li"><a href="">Contacto</a></li>
+                <li class="header__nav--input"><input classtype="text" name="buscador" id="buscador" placeholder="¿que estas buscando?"></li>
             </ul>
-            <div class="header__nav__buscador">
-                <!-- <p>¿que estas buscando?</p> -->
-                <input type="text" name="buscador" id="buscador" placeholder="¿que estas buscando?">
-            </div>            
         </nav>
     </header>
+
+    <!-- inicio del main -->
     <main class="main">
         <section class="main__galeria">
             <img src="./media/galeria1.jpg" alt="">
