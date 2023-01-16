@@ -3,14 +3,49 @@
 *{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;    
+    box-sizing: border-box;
+    list-style: none;    
 }
 html{
     font-size: 62.5%;/* hack 1ren = 10px*/
 }
 
 /*generales*/
+body{
+    text-align: center;
+}
+h2{
+    font-size: 4rem;
+    font-family: 'Righteous', cursive;
+}
+h3{
+    font-size: 3.5rem;
+    font-family: 'Righteous', cursive;
+}
+h4{
+    font-size: 3rem;
+    font-family: 'Righteous', cursive; 
+}
+p{
+    font-size: 2.5rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+a{
+    text-decoration: none;
+}
+.fondo{
+    background-color: #e5e5f7;
+    background-image:  radial-gradient(#444cf7 0.5px, transparent 0.5px), radial-gradient(#444cf7 0.5px, #e5e5f7 0.5px);
+    background-size: 20px 20px;
+    background-position: 0 0,10px 10px;    
+    padding-bottom: 10px;
 
+}
+.separador{
+    width: 50%;
+    height: 1rem;
+    background-color: fuchsia;
+}
 .flex_center{
     display: flex;    
     justify-content: center;
@@ -71,6 +106,7 @@ html{
     width: 65px;
 }
 
+/* Estilos del NAV*/
 .header__nav{
     grid-area: header__nav;
     position: sticky;
@@ -135,17 +171,7 @@ html{
     text-align: center;
     padding-bottom: 10px;    
 }
-.main__galeria{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(100px, auto));
-    align-items: center;
-    grid-column-gap: 3px;
-    border: 14px inset #808080bf;
-}
-.main__galeria img{
-    width: 100%;
-    height: 100%;
-}
+
 .main__presentacion{
     margin: 2% 20%;    
 }
@@ -156,8 +182,57 @@ html{
     font-size: 2rem;
 }
 
+.main__servicios{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas: 
+        "imagen1 desc1"
+        "desc2 imagen2"
+        "imagen3 desc3";
+    column-gap: 3rem;
+    row-gap: 5rem;
+    align-items: center;
+    font-size: 4rem;
+    margin: 5% 10%;
 
-
+}
+.main__servicios p{
+    font-size: 2rem;
+}
+.main__servicios_imagen1{    
+    grid-area: imagen1;
+    width: 100%;
+}
+.main__servicios_imagen1:hover{
+    border: 2px solid #777;
+}
+    .main__servicios_imagen2{
+    grid-area: imagen2;
+    width: 100%;
+}
+.main__servicios_imagen2:hover{
+    border: 1px solid #777;
+}
+.main__servicios_imagen3{
+    grid-area: imagen3;
+    width: 100%;
+}
+.main__servicios_imagen3:hover{
+    border: 1px solid #777;
+}
+.main__servicios_desc1{
+    grid-area: desc1;
+    text-align: left;
+}
+.main__servicios_desc2{
+    grid-area: desc2;
+    text-align: right;
+}
+.main__servicios_desc3{
+    grid-area: desc3;
+    text-align: left;
+}
 
 .main__barra{
     display: flex;
@@ -231,14 +306,18 @@ html{
     }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 773px) {
     .header{
-        background-color: yellow;
-    }
-    .header__logo{
+        background-color: black;
         display: flex;
-
+        flex-direction: column;
     }
+    .boton{
+        display: block;
+    }
+    .header__nav{
+        display: none;        
+    }    
 }
 
 @media screen and (max-width: 480px) {
