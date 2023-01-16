@@ -8,10 +8,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kalaka Calcos y Estampados</title>
-    <link rel="shortcut icon" href="./media/logo.png" type="image/x-icon">
+    <link rel="shortcut icon" href="../media/logo.png" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Euphoria+Script&family=Montserrat:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Euphoria+Script&family=Montserrat:wght@500&family=Righteous&display=swap" rel="stylesheet">    
     <link rel="stylesheet" href="../css/estilo.css">
 </head>
 <body>
@@ -27,25 +27,41 @@
         </div>
         
         <div class="header__user flex_center">
-            <div class="header__user__carrito">
-                <a href="../vistas/#">
-                <img src="../media/carritoDeCompras.png" alt=""></a>
-            </div>           
-            
             <div class="header__user__usuario">
-                <a href="../vistas/#">
+                <a href="./vistas/#">
                     <img src="../media/cuenta.png" alt="">
                 </a>          
             </div>
+                        <!-- menu desplegable responsive -->
+            <div class="contenedor__menu">
+                <input type="checkbox" name="" id="check" class="check">
+                <label for="check" class="menu">
+                    <span class="menu__abrir" >&#09776</span>
+                    <span class="menu__cerrar">X</span>                    
+                </label>
+                <nav class="nav__menu">
+                    <ul >
+                        <li class="menu__nav__li"><a href="../index.html">Home</a></li>
+                        <li class="menu__nav__li menu__nav--active"><a href="./calcos.html">Calcos</a></li>
+                        <li class="menu__nav__li"><a href="./impresiones.html">Impresiones</a></li>
+                        <li class="menu__nav__li"><a href="./estampados.html">Estampados</a></li>
+                        <li class="menu__nav__li"><a href="./contacto.html">Contacto</a></li>                        
+                    </ul>
+                </nav>
+            </div>            
+            <div class="header__user__carrito">
+                <a href="./vistas/#">
+                    <img src="../media/carritoDeCompras.png" alt=""></a>
+            </div>                
         </div>
         <!-- Barra de Navegacion -->
         <nav class="header__nav flex_center">
             <ul data-aos="fade-right" data-aos-duration="1200">
                 <li class="header__nav__li"><a href="../index.html">Home</a></li>
-                <li class="header__nav__li header__nav--active"><a href="../vistas/calcos.html">Calcos</a></li>
-                <li class="header__nav__li"><a href="../vistas/impresiones.html">Impresiones</a></li>
-                <li class="header__nav__li"><a href="../vistas/estampados.html">Estampados</a></li>
-                <li class="header__nav__li"><a href="../vistas/contacto.html">Contacto</a></li>
+                <li class="header__nav__li header__nav--active"><a href="./calcos.html">Calcos</a></li>
+                <li class="header__nav__li"><a href="./impresiones.html">Impresiones</a></li>
+                <li class="header__nav__li"><a href="./estampados.html">Estampados</a></li>
+                <li class="header__nav__li"><a href="./contacto.html">Contacto</a></li>
                 <li class="header__nav--input">
                     <input classtype="text" name="buscador" id="buscador" placeholder="¿que estas buscando?">
                 </li>
@@ -55,34 +71,33 @@
     
     <!-- inicio del main -->
     <main class="main__calcos fondo">
-        <section class="calcos">
-            <h2>Calcos y Etiquetas</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, nulla ab consectetur expedita quis facilis reprehenderit illum repellendus, ipsum rerum eius perspiciatis perferendis deleniti nesciunt id, obcaecati et odio dicta. Id ipsum quaerat a harum repudiandae at vero atque ut. Modi perferendis ipsa quidem blanditiis hic sed, ut eaque aspernatur iste, laudantium expedita magnam ipsam culpa similique maiores reprehenderit vitae?
-            </p>
-            <hr class="separador" data-aos="fade-right" data-aos-duration="1200">
-            <div class="galeria">
-                <img src="../media/calcos1.jpg" alt="" class="galeria__img">
-                <img src="../media/calcos2.jpg" alt="" class="galeria__img">
-                <img src="../media/calcos3.jpg" alt="" class="galeria__img">
-            </div>
-        </section>
-
+        <section class="calcos padding__main">
+            <h3>Calcos y Etiquetas</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, nulla ab consectetur expedita quis facilis reprehenderit illum repellendus, ipsum rerum eius perspiciatis perferendis deleniti nesciunt id, obcaecati et odio dicta. Id ipsum quaerat a harum repudiandae at vero atque ut. Modi perferendis ipsa quidem blanditiis hic sed, ut eaque aspernatur iste, laudantium expedita magnam ipsam culpa similique maiores reprehenderit vitae?
+                </p>
+        </section>            
+    <hr class="separador" data-aos="fade-right" data-aos-duration="1200">
+    <div class="galeria">
+        <img src="../media/calcos1.jpg" alt="" class="galeria__img">
+        <img src="../media/calcos2.jpg" alt="" class="galeria__img">
+        <img src="../media/calcos3.jpg" alt="" class="galeria__img">
+    </div>    
     </main>
-    <!-- fin del main-->
+    
     <!-- Inicio del Footer -->
     <footer class="footer">
         <section class="footer__datos">
             <div class="footer__datos__iconos">
                 <img src="../media/footer1.png" alt="">                
-                <p>Lorem, ipsum dolor.</p>
+                <p>kalaka.calcos@gmail.com</p>
             </div>
             <div class="footer__datos__iconos">
                 <img src="../media/footer2.png" alt="">
-                <p>Lorem, ipsum dolor.</p>
+                <p>Tel: 4310-XXXX</p>
             </div>
             <div class="footer__datos__iconos">
                 <img src="../media/footer3.png" alt="">
-                <p>Lorem, ipsum dolor.</p>
+                <p>Av. Pichincha xxxxx C.A.B.A</p>
             </div>
         </section>
         <section class="footer__redes">
@@ -103,6 +118,5 @@
     <script>
         AOS.init();
     </script>
-    
 </body>
 </html>

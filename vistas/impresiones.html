@@ -1,52 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- libreria para animaciones -->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kalaka</title>
-    <link rel="shortcut icon" href="./media/logo.png" type="image/x-icon">
-    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Raleway&family=Roboto+Slab:wght@500&family=Rubik+Marker+Hatch&display=swap" rel="stylesheet">    
-    <link rel="stylesheet" href="../css/estilo.css">    
+    <title>Kalaka Calcos y Estampados</title>
+    <link rel="shortcut icon" href="../media/logo.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Euphoria+Script&family=Montserrat:wght@500&family=Righteous&display=swap" rel="stylesheet">    
+    <link rel="stylesheet" href="../css/estilo.css">
 </head>
 <body>
-    <!-- incio header son seccion Logo y Nav -->
+    <!-- Inicio HEADER -->
     <header class="header">
-        <section class="header__contenLogo">
-            <div>               
-                <img class="header__logo" src="../media/logoCMYK.png" alt="Logo de la Pagina">
-            </div>
-            <div class="header__titulo">
+        <div class="header__logo flex_center">
+            <img src="../media/logo.png" alt="">
+        </div>
+
+        <div class="header__titulo flex_center">
                 <h1>KALAKA</h1>
                 <h2>Calcos y Estampados</h2>
+        </div>
+        
+        <div class="header__user flex_center">
+            <div class="header__user__usuario">
+                <a href="./vistas/#">
+                    <img src="../media/cuenta.png" alt="">
+                </a>          
             </div>
-            <section class="header__lateral">
-                <div class="header__usuario">
-                    <img src="../media/miCuenta.png" class="header__icono" alt="Icono de Cuenta">
-                    <h3 class="header__carritousuario--h3">Mi Cuenta</h3>
-                    <img src="../media/carritoDeCompras.png" class="header__icono" alt="Icono Carrito de Compras ">
-                    <h3 class="header__carritousuario--h3">Mi Carrito</h3>
-                </div>                
-                <div class="header__contentBuscador">
-                    <input class="header__buscador" type="text" name="buscador" id="buscador" placeholder="¿Que estas buscando?">
-                </div>
-            </section>
-        </section>
-        <!-- inicio del nav       -->
-        <nav class="header__nav">
-            <div class="header__contenUl">
-                <ul class="header__ul">
-                    <li><a class="header__li" href="../index.html">INICIO</a></li>
-                    <li><a class="header__li" href="../vistas/calcos.html">CALCOS</a></li>
-                    <li><a class="header__li" href="./estampados.html">ESTAMPADOS</a></li>
-                    <li><a class="header__li header__li--activo" href="./impresiones.html">IMPRESIONES</a></li>
-                    <li><a class="header__li"  href="./contacto.html">CONTACTO</a></li>
-                    <li><a class="header__li" href="./nosotros.html">NOSOTROS</a></li>
-                </ul>
+                        <!-- menu desplegable responsive -->
+            <div class="contenedor__menu">
+                <input type="checkbox" name="" id="check" class="check">
+                <label for="check" class="menu">
+                    <span class="menu__abrir" >&#09776</span>
+                    <span class="menu__cerrar">X</span>                    
+                </label>
+                <nav class="nav__menu">
+                    <ul >
+                        <li class="menu__nav__li"><a href="../index.html">Home</a></li>
+                        <li class="menu__nav__li"><a href="./calcos.html">Calcos</a></li>
+                        <li class="menu__nav__li menu__nav--active"><a href="./impresiones.html">Impresiones</a></li>
+                        <li class="menu__nav__li"><a href="./estampados.html">Estampados</a></li>
+                        <li class="menu__nav__li"><a href="./contacto.html">Contacto</a></li>                        
+                    </ul>
+                </nav>
             </div>            
+            <div class="header__user__carrito">
+                <a href="./vistas/#">
+                    <img src="../media/carritoDeCompras.png" alt=""></a>
+            </div>                
+        </div>
+        <!-- Barra de Navegacion -->
+        <nav class="header__nav flex_center">
+            <ul data-aos="fade-right" data-aos-duration="1200">
+                <li class="header__nav__li"><a href="../index.html">Home</a></li>
+                <li class="header__nav__li"><a href="./calcos.html">Calcos</a></li>
+                <li class="header__nav__li header__nav--active"><a href="./impresiones.html">Impresiones</a></li>
+                <li class="header__nav__li"><a href="./estampados.html">Estampados</a></li>
+                <li class="header__nav__li"><a href="./contacto.html">Contacto</a></li>
+                <li class="header__nav--input">
+                    <input classtype="text" name="buscador" id="buscador" placeholder="¿que estas buscando?">
+                </li>
+            </ul>
         </nav>
     </header>     
-    <!-- fin del header -->
+    
     <!-- inicio del main -->
     <main class="main__impresiones fondo">
         <section class="main__vinilos">
@@ -72,35 +94,42 @@
                 <img src="../media/lonas2.jpg" alt="" class="galeria__img">
                 <img src="../media/lonas3.jpg" alt="" class="galeria__img">
             </div>            
-        </section>
-        
+        </section>        
     </main>
-    <!-- fin del main-->
-    <!-- inicio del footer -->
+    
+    <!-- Inicio del Footer -->
     <footer class="footer">
-        <div class="footer__contacto">
-            <div class="footer__contacto__columna" >
-                <img class="footer__iconos" src="../media/telefono.png" alt="">
-                <p>011 4444 4444</p>
-            </div>
-            <div class="footer__contacto__columna">
-                <img class="footer__iconos" src="../media/ubicacion.png" alt="">
-                <p>Pichincha xxxx - Temperley</p>                
-            </div>
-            <div class="footer__contacto__columna">
-                <img class="footer__iconos" src="../media/email.png" alt="">
+        <section class="footer__datos">
+            <div class="footer__datos__iconos">
+                <img src="../media/footer1.png" alt="">                
                 <p>kalaka.calcos@gmail.com</p>
             </div>
-        </div>
-        <div class="footer__redes ">
-            <p>Sigamos Conectados</p>
-            <img class="footer__iconos--redes" src="../media/instagram.png" alt="">
-            <img  class="footer__iconos--redes" src="../media/facebook.png" alt="">
-            <!-- seccion propaganda y autoria -->
-        </div>
-        <div class="footer__autoria">
-            <p>Este pagina fue diseñada por <span>SR.GFP</span></p>
-        </div>
+            <div class="footer__datos__iconos">
+                <img src="../media/footer2.png" alt="">
+                <p>Tel: 4310-XXXX</p>
+            </div>
+            <div class="footer__datos__iconos">
+                <img src="../media/footer3.png" alt="">
+                <p>Av. Pichincha xxxxx C.A.B.A</p>
+            </div>
+        </section>
+        <section class="footer__redes">
+            <h3>Sigamos Conectados</h3>
+            <div>
+                <a href="">
+                    <img src="../media/redes1.png" alt="">
+                </a>                
+            </div>
+            <div>
+                <a href="">
+                    <img src="../media/redes2.png" alt="">
+                </a>                
+            </div>
+        </section>
     </footer>
+
+    <script>
+        AOS.init();
+    </script>
 </body>
 </html>
