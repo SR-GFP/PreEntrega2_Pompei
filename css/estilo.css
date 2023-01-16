@@ -76,20 +76,19 @@ a{
     grid-area: header__titulo;    
     text-align: center;
     color: black;
-    font-size: 4rem;
-
 }
 .header__titulo h1{    
     text-shadow: 11px -4px 19px #06dbee;
     font-family: 'Courier New', Courier, monospace;
     margin-bottom: -10px;
     color:  #a21a1a;
+    font-size: 7rem;
 }
 .header__titulo h2 {
     font-size: 4rem;
     font-family: 'Euphoria Script';
     font-style: italic;
-    margin-top: -25px;
+    margin-top: -20px;
     color: white;
 }
 
@@ -115,7 +114,7 @@ a{
     color: #a21a1a;
     font-size: 5rem;
     border: 2px solid #a21a1a;
-    border-radius: 1rem;
+    border-radius: 7px;
 }
 .nav__menu{
     position: relative;
@@ -361,7 +360,11 @@ a{
     justify-content: space-evenly;
     align-items: flex-start;
     flex-wrap: wrap;
-
+    }
+    .main__barra__columnas{
+        width: 49.99999%;
+        margin: 10px 0px;
+        justify-content: center;
     }
 }
 
@@ -377,17 +380,36 @@ a{
     .main__barra{
         flex-direction: column;
         align-content: center;
-    }    
+    }
+    .footer__datos{
+        flex-direction: column;
+    }
+    .footer__datos__iconos{
+        margin: 10px 0px;
+    }
 }
 @media screen and (max-width: 320px) {
     .header{
         background-color: black;
+    }
+    .header__titulo h1{
+        font-size: 5rem;
+    }    
+    .header__titulo h2 {
+        font-size: 3rem;
+        margin-top: -15px;
+    }
+    .main__presentacion h3{
+        font-size: 3rem;
     }
     .main__servicios{
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
         }
+    .main p{
+        font-size: 1.5rem;
+    }
     .footer p{
         font-size: 1rem;
         flex-direction: column;
