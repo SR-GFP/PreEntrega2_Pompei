@@ -33,7 +33,7 @@
                     <img src="../media/cuenta.png" alt="">
                 </button>
             </div>
-            <!-- Ventana Emergente Log in User -->            
+            <!-- Ventana Emergente Log in User creada a partir de un modal de bootstrap se modifican los label y los input-->            
             <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
@@ -60,7 +60,7 @@
                 </div>
             </div>
 
-            <!-- menu desplegable responsive -->
+            <!-- menu desplegable responsive creada por mi(busque ayuda en youtube) con html y css -->
             <div class="contenedor__menu">
                 <input type="checkbox" name="" id="check" class="check">
                 <label for="check" class="menu">
@@ -79,9 +79,23 @@
             </div>
             
             <div class="header__user__carrito">
-                <a href="./shop.html">
+                <button type="button" class="button" data-bs-toggle="modal" data-bs-target="#paginaEnConstruccion">
                     <img src="../media/carritoDeCompras.png" alt="">
-                </a>
+                </button>                
+                <!-- Ventana Emergente de mensaje creada a partir de un modal de bootstrap se modifican input y label-->    
+                <div class="modal fade" id="paginaEnConstruccion" tabindex="-1" aria-labelledby="paginaEnConstruccionLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="paginaEnConstruccionLabel">upps!</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                Pagina en construccion! Te pedimos disculpas, hasta no hacer el curso de JS.
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>                
         </div>
 
