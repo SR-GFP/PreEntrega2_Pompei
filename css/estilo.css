@@ -44,12 +44,14 @@ a{
 .padding__main{
     padding: 2% 10%;    
 }
+
 .separador{
     width: 50%;
     height: 1rem;
     background-color: fuchsia;
     margin: 2rem 0rem;
 }
+
 .flex_center{
     display: flex;    
     justify-content: center;
@@ -111,10 +113,16 @@ a{
     color: white;
 }
 
+
 .header__user{
     grid-area: header__user;
     align-items: center;
     justify-content: space-evenly;    
+}
+/*Cambio en los estilos de bootstrap para que se acomode a mi diseño*/
+.button{
+    border: transparent;
+    background-color: transparent;
 }
 .header__user p{
     border-radius: 47px;
@@ -341,6 +349,7 @@ a{
 .footer__redes h3{
     font-size: 2rem;
 }
+
 
 /*Responsive*/
 @media screen and (max-width: 1024px) {
